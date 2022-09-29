@@ -2,19 +2,7 @@ require 'rails_helper'
 
 RSpec.describe "Tags", type: :request do
     describe "GET /tags" do
-        it "returns list of all tags" do
-            create(:tag, name: 'Tag 1')
-            create(:tag, name: 'Tag 2')
-            create(:tag, name: 'Tag 3')
-            
-            get '/api/v1/tags'
-           
-            expect(response).to have_http_status(200)  
-            
-            json = JSON.parse(response.body) 
-            
-            expect(json['data'].first['attributes']['name']).to eq 'Tag 1'
-        end
+
     end    
     describe "GET /tags/:id" do
         it "returns tag by id" do

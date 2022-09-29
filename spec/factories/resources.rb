@@ -3,5 +3,6 @@ FactoryBot.define do
     name { "MyString" }
     description { "MyString" }
     url { "MyString" }
+    resource_type
   end
 end

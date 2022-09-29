@@ -31,8 +31,10 @@ ActiveRecord::Schema.define(version: 2021_03_10_124008) do
     t.string "name"
     t.string "description"
     t.string "url"
+    t.bigint "resource_type_id"
     t.datetime "created_at", precision: 6, null: false
     t.datetime "updated_at", precision: 6, null: false
+    t.index ["resource_type_id"], name: "index_resources_on_resource_type_id"
   end
 
   create_table "tag_assignments", force: :cascade do |t|
